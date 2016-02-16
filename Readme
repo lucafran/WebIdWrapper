@@ -1,0 +1,20 @@
+# WebIdWrapper
+This project contains a JS WebId Server, a wrapper in Jolie which implements a simple interface to use that server and a DemoClient
+
+For using this application you have to install NodeJs and Jolie interpreter (http://jolie-lang.org/)
+#usage
+
+
+
+1-move to /NodeJS/src/webid and call 
+npm install --save
+
+2-do the same in /NodeJsand do the same
+
+3-create your own WebId and save the certificate in .pem format in the same repository with DemoClient.ol 
+
+4-run the three instances in this order:
+node src/server.js
+jolie wrapper.ol
+jolie DemoClient.ol
+

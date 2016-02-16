@@ -1,0 +1,19 @@
+include "console.iol"
+
+type SumReqType: void { .x: string }
+type SumResType: void { .sum: int }
+
+outputPort JSApp {
+	Location: "socket://localhost:8000"
+	Protocol: http { .method = "GET" }
+	RequestResponse: sum( SumReqType )( undefined )
+}
+
+main
+{
+  file.filename = "webid.pem";		
+  readFile@File( file )( s );
+  
+  sum@JSApp( { .x = s} )( res );
+  println@Console( res.sum )()
+}

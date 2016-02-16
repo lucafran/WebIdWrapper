@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 Profile of #{profile.name} (name)
+	p You way want to see your <a href="/wall">wall</a>!
+	ul
+		li WebID: #{profile.webid}
+		li Birthday: #{profile.birthday}
+	h2 List of friends
+	ul
+		each person in profile.knows
+			li= person

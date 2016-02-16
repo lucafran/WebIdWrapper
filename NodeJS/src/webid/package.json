@@ -1,0 +1,57 @@
+{
+  "name": "webid",
+  "version": "0.1.0",
+  "description": "WebID module",
+  "homepage": "https://github.com/magnetik/node-webid",
+  "keywords": [
+    "webid",
+    "w3c",
+    "foaf"
+  ],
+  "maintainers": [
+    "Baptiste Lafontaine <baptiste33@gmail.com> (http://magnetik.org)"
+  ],
+  "contributors": [
+    "Baptiste Lafontaine <baptiste33@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/magnetik/node-webid/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git+ssh://git@github.com/magnetik/node-webid.git"
+    }
+  ],
+  "dependencies": {
+    "request": ">= 2.9.3",
+    "underscore": ">= 1.3.0",
+    "rdfstore": "*"
+  },
+  "devDependencies": {
+    "coffee-script": ">= 1.6.0"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "pretest": "cake build",
+    "postinstall": "cake build",
+    "postupdate": "cake build"
+  },
+  "main": "./bin/webid",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/magnetik/node-webid.git"
+  },
+  "bin": {
+    "webid": "webid.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
